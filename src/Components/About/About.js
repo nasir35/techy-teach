@@ -35,7 +35,8 @@ const About = () => {
                     <img src="https://thumbs.dreamstime.com/b/confident-man-teacher-coach-wearing-headset-speaking-holding-online-lesson-focused-student-wearing-glasses-looking-laptop-180674829.jpg" alt="" className="border rounded-xl"/>
                 </div>
             </div>
-            <section className="p-12">
+            {/* Teacher components is causing error. that's why i commented it */}
+            {/* <section className="p-12">
                 <h2 className="text-center w-3/12 mx-auto text-3xl text-custom-color font-semibold pb-2 border-b-4 border-red-500 mb-4">Our Instructors</h2>
                 <p className="font-medium text-custom-color text-center">We have skilled and well trained instructor. here are a few profile of our respected instructors.</p>
             </section>
@@ -43,7 +44,7 @@ const About = () => {
                 {
                     uniqueTeachers.map((teacher) => <Teacher teacher = {teacher}></Teacher>)
                 }
-             </div>
+             </div> */}
         </div>
     );
 };

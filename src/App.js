@@ -14,19 +14,19 @@ function App() {
     <BrowserRouter>
     <Header></Header>
     <Switch>
-      <Route exact path="/home">
-        <Home></Home>
-      </Route>
-      <Route exact path="/services">
-        <Services></Services>
-      </Route>
-      <Route exact path="/blogs">
-        <Blog></Blog>
-      </Route>
-      <Route exact path="/about">
+      <Route exact path="/">
         <About></About>
       </Route>
-      <Route exact path="/">
+      <Route path="/home">
+        <Home></Home>
+      </Route>
+      <Route path="/services">
+        <Services></Services>
+      </Route>
+      <Route path="/blogs">
+        <Blog></Blog>
+      </Route>
+      <Route path="/about">
         <About></About>
       </Route>
       <Route path="*">

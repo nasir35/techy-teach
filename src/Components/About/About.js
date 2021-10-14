@@ -4,9 +4,12 @@ import Teacher from '../Teacher/Teacher';
 
 const About = () => {
     const [teachers] = useServices();
+
     const uniqueTeachers = teachers.slice(0,3);
     const [,,,, fourth] = teachers;
     uniqueTeachers.push(fourth);
+    console.log(uniqueTeachers);
+        
     return (
         <div>
             <div className="bg-gray-50 pt-6">
@@ -21,6 +24,7 @@ const About = () => {
                     <p className="text-xl text-custom-color">New Tech is a technology related teaching platform. We work on making technology more easier to understand. We try to present techonology related knowledge to our student in a better and fun way. Our respected instructors are highly qualified on teaching and they know how to solve your problem! We are focusing on student's need. By giving them the very first priority we are making lessons learner friendly. We also arrange many events to make you more active and figure out your creativity. Many of our student's remark our website as the turning element of their life.</p>
                 </div>
             </div>
+
             <div className="w-11/12 mx-auto grid grid-cols-2 gap-6 py-12">
                 <div>
                     <h2 className=" inline-block text-3xl text-custom-color font-semibold pb-2 border-b-4 border-red-500 mb-4">Why Choose Us?</h2>
@@ -35,16 +39,16 @@ const About = () => {
                     <img src="https://thumbs.dreamstime.com/b/confident-man-teacher-coach-wearing-headset-speaking-holding-online-lesson-focused-student-wearing-glasses-looking-laptop-180674829.jpg" alt="" className="border rounded-xl"/>
                 </div>
             </div>
-            {/* Teacher components is causing error. that's why i commented it */}
-            {/* <section className="p-12">
+            
+            <section className="p-12">
                 <h2 className="text-center w-3/12 mx-auto text-3xl text-custom-color font-semibold pb-2 border-b-4 border-red-500 mb-4">Our Instructors</h2>
                 <p className="font-medium text-custom-color text-center">We have skilled and well trained instructor. here are a few profile of our respected instructors.</p>
             </section>
             <div className="grid grid-cols-4 gap-3 p-12 pt-2">
                 {
-                    uniqueTeachers.map((teacher) => <Teacher teacher = {teacher}></Teacher>)
+                    uniqueTeachers[0] && uniqueTeachers?.map((teacher) => <Teacher teacher={teacher}></Teacher>)
                 }
-             </div> */}
+             </div>
         </div>
     );
 };
